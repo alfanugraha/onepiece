@@ -1,0 +1,23 @@
+name: extracting
+
+on:
+  schedule:
+    - cron: '0 18 * * *'  # every day at 01.00 (WIB - 7)
+
+jobs:
+  save-data:
+    runs-on: macOS-latest
+    env:
+      ELEPHANT_SQL_DBNAME: ${{ secrets.ELEPHANT_SQL_DBNAME }}
+      ELEPHANT_SQL_HOST: ${{ secrets.ELEPHANT_SQL_HOST }}
+      ELEPHANT_SQL_USER: ${{ secrets.ELEPHANT_SQL_USER }}
+      ELEPHANT_SQL_PASSWORD: ${{ secrets.ELEPHANT_SQL_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@master
+      - name: Install RPostgreSQL package
+        run: Rscript -e 'install.packages("RPostgreSQL", dependencies = TRUE)'
+      - name: Install jsonlite package
+        run: Rscript -e 'install.packages("jsonlite", dependencies = TRUE)'
+      - name: Getting data from aladhan.com/prayer-times-api and add to database
+        run: Rscript prayers-api.R
