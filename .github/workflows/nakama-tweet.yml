@@ -2,7 +2,7 @@ name: Tweet Routine Random One Piece Character
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # At every 10th minute
+    - cron: '0 10 * * *'  # At 10:00
 
 jobs:
   nakama-tweet:
