@@ -16,7 +16,7 @@ samp_word <- sample(hashtag, 3)
 if(nrow(selected_fig) > 0){
   ## Status Message
   status_details <- paste0(
-    "🈁 Karakter One Piece hari ini adalah\n", 
+    "🈁 Halo Para Nakama! Karakter One Piece kali ini adalah\n", 
     "Nama: ", selected_fig$name, "\n",
     "Nama Jepang: ", selected_fig$japanese_name, "\n",
     "Afiliasi: ", selected_fig$affiliations, "\n",
