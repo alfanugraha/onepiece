@@ -21,7 +21,7 @@ jobs:
         run: Rscript -e 'install.packages("rvest", dependencies = TRUE)'
       - name: Install janitor package
         run: Rscript -e 'install.packages("janitor", dependencies = TRUE)'
-      - name: Install janitor package
+      - name: Install tidyverse package
         run: Rscript -e 'install.packages("tidyverse", dependencies = TRUE)'        
       - name: Scrape data from One Piece Fandom Site and Store to MongoDB
         run: Rscript nakama-scrape.R

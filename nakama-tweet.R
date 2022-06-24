@@ -3,10 +3,10 @@ library(mongolite)
 library(rtweet)
 
 message("Retrieve random character")
-onepiece_collection <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
+onepiece_conn <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
                              db=Sys.getenv("MONGO_CLOUD_DB"), 
                              url=Sys.getenv("MONGO_CLOUD_URL"))
-selected_fig <- onepiece_collection$aggregate('[{ "$sample": { "size": 1 } }]')
+selected_fig <- onepiece_conn$aggregate('[{ "$sample": { "size": 1 } }]')
 
 message("Set status and random hash tag")
 ## 1st Hash Tag
@@ -16,12 +16,12 @@ samp_word <- sample(hashtag, 3)
 if(nrow(selected_fig) > 0){
   ## Status Message
   status_details <- paste0(
-    "🈁 Karakter One Piece hari ini:\n", 
+    "🈁 Karakter One Piece hari ini adalah\n", 
     "Nama: ", selected_fig$name, "\n",
     "Nama Jepang: ", selected_fig$japanese_name, "\n",
     "Afiliasi: ", selected_fig$affiliations, "\n",
     "Peran: ", selected_fig$occupations, "\n",
-    "Tahun Debut: ", selected_fig$year, "pada edisi ", selected_fig$debut_manga, " Manga dan ", selected_fig$debut_anime, " Anime\n",
+    "Tahun Debut: ", selected_fig$year, " pada edisi Manga ke-", selected_fig$debut_manga, " dan Anime ke-", selected_fig$debut_anime, "\n",
     "\n", selected_fig$url, "\n",
     paste0("#", samp_word, collapse = " "))
   

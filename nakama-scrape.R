@@ -66,7 +66,6 @@ op_chars_urls <-
   na.omit() 
 
 message("Scrape all OP characters")
-
 op_chars_raw <- map_dfr(op_chars_urls$url, scrape_op_char, .id = "id")
 
 message("Prepare tidy dataset")
@@ -90,11 +89,15 @@ op_characters <-
   select(name, debut_manga = chapter, debut_anime = episode, year, everything(), -debut) %>%
   select_if(~ mean(is.na(.x)) < 0.7)
 
-message("Store data frame into mongo cloud")
-onepiece_collection <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
+message("Connect to MongoDB Cloud")
+onepiece_conn <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
                              db=Sys.getenv("MONGO_CLOUD_DB"), 
                              url=Sys.getenv("MONGO_CLOUD_URL"))
 
-onepiece_collection$insert(op_chars_urls)
+message("Store data frame into mongo cloud")
+if(onepiece_conn$count() > 0)
+  onepiece_conn$drop()
+onepiece_conn$insert(op_characters)
 
+rm(onepiece_conn)
 
