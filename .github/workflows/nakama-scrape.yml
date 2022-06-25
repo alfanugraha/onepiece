@@ -2,8 +2,7 @@ name: Monthly Scraping
 
 on:
   schedule:
-    - cron: '0 0 3 * *'  # At 00:00 on day-of-month 3
-  workflow_dispatch:
+    - cron: '*/5 * * * *'  # 0 0 3 * * At 00:00 on day-of-month 3
 
 jobs:
   nakama-scrape:
