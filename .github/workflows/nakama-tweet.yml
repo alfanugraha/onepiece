@@ -2,7 +2,7 @@ name: Daily Tweet
 
 on:
   schedule:
-    - cron: '*/20 * * * *'  # 0 10 * * * At 10:00
+    - cron: '0 15 * * *'  # At 15:00
 
 jobs:
   nakama-tweet:

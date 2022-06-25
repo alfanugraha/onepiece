@@ -9,7 +9,7 @@ onepiece_conn <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"),
 selected_fig <- onepiece_conn$aggregate('[{ "$sample": { "size": 1 } }]')
 
 message("Set status and random hash tag")
-## 1st Hash Tag
+## Hash Tag
 hashtag <- c("MDS","MongoDB","rtweet","bot","OnePiece", "nakama", "Fandom", "Anime", "Manga", "rvest", "scraping", "japanese")
 samp_word <- sample(hashtag, 3)
 
@@ -35,7 +35,7 @@ if(nrow(selected_fig) > 0){
   )
   
   message("Post the status to twitter")
-  ## Post the image to Twitter
+  ## Post the status to Twitter
   post_tweet(
     status = status_details,
     token = token
