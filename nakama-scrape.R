@@ -4,9 +4,6 @@ library(tidyverse)
 library(rvest)
 library(janitor)
 
-# library(purrr)
-# library(stringr)
-
 message("Define function to scrape OP character")
 scrape_op_char <- function(char_url) {
   char_url %>%
