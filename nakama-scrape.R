@@ -87,9 +87,11 @@ op_characters <-
   select_if(~ mean(is.na(.x)) < 0.7)
 
 message("Connect to MongoDB Cloud")
-onepiece_conn <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
-                             db=Sys.getenv("MONGO_CLOUD_DB"), 
-                             url=Sys.getenv("MONGO_CLOUD_URL"))
+onepiece_conn <- mongo(
+  collection=Sys.getenv("MONGO_CLOUD_COLLECTION"),
+  db=Sys.getenv("MONGO_CLOUD_DB"),
+  url=Sys.getenv("MONGO_CLOUD_URL")
+)
 
 message("Store data frame into mongo cloud")
 if(onepiece_conn$count() > 0)

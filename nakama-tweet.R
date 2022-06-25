@@ -3,9 +3,11 @@ library(mongolite)
 library(rtweet)
 
 message("Retrieve random character")
-onepiece_conn <- mongo(collection=Sys.getenv("MONGO_CLOUD_COLLECTION"), 
-                             db=Sys.getenv("MONGO_CLOUD_DB"), 
-                             url=Sys.getenv("MONGO_CLOUD_URL"))
+onepiece_conn <- mongo(
+  collection=Sys.getenv("MONGO_CLOUD_COLLECTION"),
+  db=Sys.getenv("MONGO_CLOUD_DB"), 
+  url=Sys.getenv("MONGO_CLOUD_URL")
+)
 selected_fig <- onepiece_conn$aggregate('[{ "$sample": { "size": 1 } }]')
 
 message("Set status and random hash tag")
