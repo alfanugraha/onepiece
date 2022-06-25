@@ -1,4 +1,4 @@
-name: Scraping One Piece Characters
+name: Monthly Scraping
 
 on:
   schedule:

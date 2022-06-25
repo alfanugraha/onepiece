@@ -1,4 +1,4 @@
-name: Tweet Routine Random One Piece Character
+name: Daily Tweet
 
 on:
   schedule:
