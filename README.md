@@ -5,7 +5,7 @@
 ![Banner](https://static.wikia.nocookie.net/onepiece/images/0/09/Chapter_863.png/revision/latest/scale-to-width-down/1000?cb=20170424163639 "Banner")
 
 
-One Piece adalah serial manga Jepang yang ditulis dan diilustrasikan oleh Eiichiro Oda. Manga ini dimuat di majalah Weekly Shonen Jump milik Shueisha sejak 1997, dan diadaptasi ke dalam serial anime yang diproduksi oleh Toei Animation, yang mulai tayang di Jepang pada tahun 1999. Berkisah tentang petualangan Monkey D. Luffy, seorang anak laki-laki yang memiliki tubuh elastis seperti karet setelah memakan Buah Iblis secara tidak sengaja. Dengan kru bajak lautnya, yang dinamakan Bajak Laut Topi Jerami, Luffy menjelajahi Grand Line untuk mencari harta karun terbesar di dunia yang dikenal sebagai **One Piece** dalam rangka untuk menjadi bajak laut berikutnya.
+One Piece adalah serial manga Jepang yang ditulis dan diilustrasikan oleh Eiichiro Oda. Manga ini dimuat di majalah Weekly Shonen Jump milik Shueisha sejak 1997, dan diadaptasi ke dalam serial anime yang diproduksi oleh Toei Animation, yang mulai tayang di Jepang pada tahun 1999. Berkisah tentang petualangan Monkey D. Luffy, seorang anak laki-laki yang memiliki tubuh elastis seperti karet setelah memakan Buah Iblis secara tidak sengaja. Dengan kru bajak lautnya, yang dinamakan Bajak Laut Topi Jerami, Luffy menjelajahi Grand Line untuk mencari harta karun terbesar di dunia yang dikenal sebagai **One Piece** dalam rangka untuk menjadi raja bajak laut berikutnya.
 
 
 ## Deskripsi 
