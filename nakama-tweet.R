@@ -43,3 +43,5 @@ if(nrow(selected_fig) > 0){
     token = token
   )
 }
+
+rm(onepiece_conn)
